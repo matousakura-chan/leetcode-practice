@@ -1,5 +1,5 @@
 import com.chen.leetcode.NineThreeThree.RecentCounter;
-import com.chen.leetcode.TwoSevenNine.Solution;
+import com.chen.leetcode.OneTwoSevenSeven.Solution;
 import com.chen.leetcode.SevenZeroFive.MyHashSet;
 
 
@@ -27,8 +27,10 @@ public class Test {
     @org.junit.Test
     public void Test62(){
         Solution solution = new Solution();
-        int [] a = {186,419,83,408};
-        System.out.println(solution.numSquares(1));
+        int [][] a = {
+                {0,1,1,1},{1,1,1,1},{0,1,1,1}
+        };
+        System.out.println(solution.countSquares(a));
     }
 
 

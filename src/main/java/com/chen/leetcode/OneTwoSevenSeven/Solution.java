@@ -1,10 +1,11 @@
-package com.chen.leetcode.TwoTwoOne;
+package com.chen.leetcode.OneTwoSevenSeven;
+
 public class Solution {
 
     int [] nums;
     int res = 0;
 
-    public int maximalSquare(char[][] matrix) {
+    public int countSquares(int[][] matrix) {
 
         if(matrix == null) return -1;
         int row = matrix.length;
@@ -15,8 +16,8 @@ public class Solution {
 
         for(int i = 0;i<row;i++){
             for(int j = 0;j<column;j++){
-                if(matrix[i][j] == '1'){
-                    if(i == 0||j == 0) nums[i*column+j] =1;
+                if(matrix[i][j] == 1){
+                        if(i == 0||j == 0) nums[i*column+j] =1;
                     else
                         nums[i*column+j] = Math.min(Math.min(nums[i*column+j-1],nums[(i-1)*column+j]),nums[(i-1)*column+j-1])+1;
                 }
@@ -26,3 +27,5 @@ public class Solution {
         return res;
     }
 }
+
+
