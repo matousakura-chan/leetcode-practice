@@ -1,9 +1,7 @@
 import com.chen.leetcode.NineThreeThree.RecentCounter;
-import com.chen.leetcode.OneTwoSevenSeven.Solution;
 import com.chen.leetcode.SevenZeroFive.MyHashSet;
-
-
-import java.util.List;
+import com.chen.leetcode.Five.Solution;
+import com.chen.leetcode.TwoZeroEight.Trie;
 
 
 public class Test {
@@ -25,12 +23,29 @@ public class Test {
 //    }
 
     @org.junit.Test
+    public void TestTrie(){
+
+        Trie trie = new Trie();
+
+        trie.insert("apple");
+        System.out.println(trie.search("apple"));
+        System.out.println(trie.search("app"));
+        System.out.println(trie.startsWith("app"));
+        trie.insert("app");
+        System.out.println(trie.search("app"));
+    }
+
+    @org.junit.Test
     public void Test62(){
         Solution solution = new Solution();
-        int [][] a = {
-                {0,1,1,1},{1,1,1,1},{0,1,1,1}
-        };
-        System.out.println(solution.countSquares(a));
+
+        int a[] = {1,2};
+        int b[] = {3,4};
+
+//        int a[] = {1,2};
+//        int b[] = {-1,3};
+        String c = "ac";
+        System.out.println(solution.longestPalindrome(c));
     }
 
 

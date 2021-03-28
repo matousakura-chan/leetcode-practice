@@ -1,6 +1,6 @@
 package com.chen.leetcode.TwoZeroEight;
 
-class Trie {
+public class Trie {
 
     class Node{
         char val;
@@ -25,6 +25,7 @@ class Trie {
         }
 
         public void setNext(char c,boolean flag) {
+            if(next[c-'0'-49] != null) return;
             Node node = new Node(c,flag);
             next[c-'0'-49] = node;
         }
