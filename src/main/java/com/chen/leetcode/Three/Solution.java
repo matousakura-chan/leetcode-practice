@@ -9,7 +9,6 @@ public class Solution {
     public int lengthOfLongestSubstring(String s) {
 
         if(s==null) return 0;
-
         char[] chars = s.toCharArray();
         HashMap<Character,Integer> map = new HashMap<>();
 

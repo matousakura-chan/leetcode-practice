@@ -1,6 +1,9 @@
 package com.chen.leetcode.Five;
 
-import java.util.HashMap;
+
+/**
+ * dp[i][j] = (s[i]==s[j]) and (j-i<3 or dp[i+1][j-1])
+ */
 
 public class Solution2 {
     public String longestPalindrome(String s) {
@@ -8,21 +11,20 @@ public class Solution2 {
         if(s  == null) return null;
 
         char[] chars = s.toCharArray();
-        HashMap<Character,Integer> map = new HashMap<>();
+        boolean [][] dp = new boolean[chars.length][chars.length];
 
-        int res = 0,resI = 0,resJ = 0;
+        int resI = 0,resJ = 0,res = 0;
 
-        for(int i = 0,j = 0;i<chars.length;i++){
-            if(map.containsKey(chars[i])){
-                j = map.get(chars[i]);
-                if(i-j+1>res){
-                    res  = i-j+1;
+        for (int j = 0; j < chars.length; j++) {
+            for (int i = 0; i <= j; i++) {
+                dp[i][j] = chars[i]==chars[j]&&(j-i<3||dp[i+1][j-1]);
+                if(dp[i][j]&&res<(j-i+1)){
+                    res = (j-i+1);
                     resI = i;
                     resJ = j;
                 }
-            }else
-                map.put(chars[i],i);
+            }
         }
-        return s.substring(resJ,resI+1);
+        return s.substring(resI,resJ+1);
     }
 }
