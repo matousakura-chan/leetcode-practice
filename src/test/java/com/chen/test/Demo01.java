@@ -121,6 +121,20 @@ public class Demo01 {
     }
 
 
+    @Test
+    public void test84(){
+        com.chen.leetcode.EightFour.Solution solution = new com.chen.leetcode.EightFour.Solution();
+        int [] a = {5,4,1,2};
+        System.out.println(solution.largestRectangleArea(a));
+    }
+    @Test
+    public void test85(){
+        com.chen.leetcode.EightFive.Solution solution = new com.chen.leetcode.EightFive.Solution();
+        char [][] a = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
+        System.out.println(solution.maximalRectangle(a));
+    }
+
+
 
 
 }
