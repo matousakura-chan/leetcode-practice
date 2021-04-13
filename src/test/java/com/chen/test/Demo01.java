@@ -134,6 +134,31 @@ public class Demo01 {
         System.out.println(solution.maximalRectangle(a));
     }
 
+    @Test
+    public void test80(){
+        com.chen.leetcode.EightZero.Solution solution = new com.chen.leetcode.EightZero.Solution();
+        //int [] a = {0,0,0,0,0};
+        int [] a = {1,1,1,2,2,3};
+        solution.removeDuplicates(a);
+    }
+
+    @Test
+    public void test26(){
+        com.chen.leetcode.TwoSix.Solution solution = new com.chen.leetcode.TwoSix.Solution();
+        int [] a = {0,0,1,1,1,2,2,3,3,4};
+        //int [] a = {1,1,1,2,2,3};
+        solution.removeDuplicates(a);
+    }
+
+    @Test
+    public void test154(){
+        com.chen.leetcode.OneFiveFour.Solution solution = new com.chen.leetcode.OneFiveFour.Solution();
+        int [] a = {2,2,2,0,1};
+        //int [] a = {1,1,1,2,2,3};
+        System.out.println(solution.findMin(a));
+    }
+
+
 
 
 
