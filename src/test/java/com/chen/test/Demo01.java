@@ -1,6 +1,7 @@
 package com.chen.test;
 
 import com.chen.common.ListNode;
+import com.chen.common.Node;
 import com.chen.leetcode.TwoOne.Solution;
 import org.junit.Test;
 
@@ -157,6 +158,45 @@ public class Demo01 {
         //int [] a = {1,1,1,2,2,3};
         System.out.println(solution.findMin(a));
     }
+
+    @Test
+    public void testSFO29(){
+        com.chen.SwordForOffer.TwoNine.Solution solution = new com.chen.SwordForOffer.TwoNine.Solution();
+        int [][] a = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+        //int [] a = {1,1,1,2,2,3};
+        for(int s :solution.spiralOrder(a))
+            System.out.println(s);
+    }
+
+    @Test
+    public void test213(){
+        com.chen.leetcode.TwoOneThree.Solution solution = new com.chen.leetcode.TwoOneThree.Solution();
+        int [] a = {2,7,9,3,1};
+        //int [] a = {1,1,1,2,2,3};
+        solution.rob(a);
+    }
+
+    @Test
+    public void testSFO35(){
+        com.chen.SwordForOffer.ThreeFive.Solution solution = new com.chen.SwordForOffer.ThreeFive.Solution();
+        Node head = new Node(7);
+        head.add(13).add(11).add(10).add(1);
+        head.print();
+        //int [] a = {1,1,1,2,2,3};
+        solution.copyRandomList(head);
+    }
+
+    @Test
+    public void test28(){
+        com.chen.leetcode.TwoEight.Solution solution = new com.chen.leetcode.TwoEight.Solution();
+        String n = "aaabbab";
+        String k = "a";
+        solution.strStr(k,n);
+
+
+    }
+
+
 
 
 
