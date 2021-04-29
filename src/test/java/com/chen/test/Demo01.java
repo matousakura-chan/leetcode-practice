@@ -2,6 +2,7 @@ package com.chen.test;
 
 import com.chen.common.ListNode;
 import com.chen.common.Node;
+import com.chen.common.TreeNode;
 import com.chen.leetcode.TwoOne.Solution;
 import org.junit.Test;
 
@@ -189,12 +190,49 @@ public class Demo01 {
     @Test
     public void test28(){
         com.chen.leetcode.TwoEight.Solution solution = new com.chen.leetcode.TwoEight.Solution();
-        String n = "aaabbab";
-        String k = "a";
-        solution.strStr(k,n);
-
-
+//        String n = "aabaaabaaac";
+//        String k = "aabaaac";
+        String n = "issip";
+        String k = "mississippi";
+        System.out.println(k);
+        System.out.println(n);
+        //"mississippi"
+        //"issip"
+        System.out.println(solution.strStr(k, n));
     }
+
+    @Test
+    public void testSFO37(){
+        com.chen.SwordForOffer.ThreeSeven.Codec codec = new com.chen.SwordForOffer.ThreeSeven.Codec();
+//        TreeNode root = new TreeNode(10,
+//                new TreeNode(5,
+//                        new TreeNode(3),
+//                        new TreeNode(7)),
+//                new TreeNode(15, null,
+//                        new TreeNode(7)));
+        TreeNode root = new TreeNode(1,
+                new TreeNode(2),
+                new TreeNode(3,
+                        new TreeNode(4),
+                        new TreeNode(5)));
+        System.out.println(codec.serialize(root));
+    }
+
+    @Test
+    public void test304(){
+        int [][] a = {{-1}};
+        com.chen.leetcode.ThreeZeroFour.NumMatrix matrix = new com.chen.leetcode.ThreeZeroFour.NumMatrix(a);
+        System.out.println(matrix.sumRegion(0, 0, 0, 0));
+    }
+
+    @Test
+    public void test368(){
+        int [] a = {4,8,10,240};
+        com.chen.leetcode.ThreeSixEight.Solution matrix = new com.chen.leetcode.ThreeSixEight.Solution();
+        matrix.largestDivisibleSubset(a);
+    }
+
+
 
 
 
