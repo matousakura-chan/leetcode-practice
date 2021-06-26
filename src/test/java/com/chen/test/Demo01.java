@@ -232,6 +232,13 @@ public class Demo01 {
         matrix.largestDivisibleSubset(a);
     }
 
+    @Test
+    public void test8(){
+        int [] a = {4,8,10,240};
+        com.chen.leetcode.Eight.Solution solution = new com.chen.leetcode.Eight.Solution();
+        System.out.println(solution.myAtoi("4442"));
+    }
+
 
 
 

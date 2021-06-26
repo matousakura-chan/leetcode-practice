@@ -41,6 +41,7 @@ public class Solution {
             }
             if (!prMove.equals(curr)) {
                 subPrev.next = curr.next;
+
                 curr.next = prMove.next;
                 prMove.next = curr;
             }
